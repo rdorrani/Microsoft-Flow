@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "color": "white",
+    "display": "table",
+    "width": "100%"
+  },
+  "attributes": {
+    "class": "=if(@currentField == 'Rejected', 'ms-bgColor-redDark', if(@currentField == 'Approved', 'ms-bgColor-teal', if(@currentField == 'Pending', 'ms-bgColor-orange', 'ms-bgColor-blue'))) + ' ms-fontColor-white'"
+  },
+  "children": [
+    {
+      "elmType": "div",
+      "txtContent": "@currentField",
+      "style": {
+        "display": "table-cell",
+        "text-align": "center",
+        "vertical-align": "middle"
+      }
+    }
+  ]
+}
