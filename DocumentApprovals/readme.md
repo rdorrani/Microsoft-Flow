@@ -4,4 +4,4 @@
 # Microsoft Forms & Power Automate
 
 ### Document Approval Flow
-[Document Approval Flow](https://forms.office.com/Pages/ShareFormPage.aspx?id=VmlEBz1JyEKtBek5y1IVP0ItwN2SxE1FlM53ige1uMZUNDZPVVQ2UDRHWUtQMlVaQ09RSzdaVk9OUC4u&sharetoken=y8OlYRA7l8cgh2kEWDbG) in Microsoft Forms.
+Import the [Document Approval Flow](https://github.com/rdorrani/Microsoft-Flow/blob/master/DocumentApprovals/DocumentApprovalWorkflow_20211025213729.zip).
