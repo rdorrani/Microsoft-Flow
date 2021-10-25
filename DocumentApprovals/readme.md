@@ -1,4 +1,4 @@
-[![Everything Is AWESOME](http://img.youtube.com/vi/4eWGdi_C2hQ/maxresdefault.jpg)](https://youtu.be/4eWGdi_C2hQ "Microsoft Forms & Power Automate")
+[![Everything Is AWESOME](http://img.youtube.com/vi/c4a3_VUDwk0/maxresdefault.jpg)](https://youtu.be/c4a3_VUDwk0 "Power Automate Custom Approvals")
 **Click image to view video**
 
 # Microsoft Forms & Power Automate
