@@ -1,0 +1,349 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 360,
+  "width": 205,
+  "hideSelection": false,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "attributes": {
+      "class": "sp-card-container"
+    },
+    "children": [
+      {
+        "elmType": "button",
+        "attributes": {
+          "class": "sp-card-defaultClickButton",
+          "role": "presentation"
+        },
+        "customRowAction": {
+          "action": "defaultClick"
+        }
+      },
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "ms-bgColor-white sp-css-borderColor-neutralLight sp-card-borderHighlight sp-card-subContainer"
+        },
+        "style": {
+          "border": "1pt dashed",
+          "border-color": "=if([$ApprovalStatus]=='Rejected','#A4262C',if([$ApprovalStatus]=='Pending','#D83B01',if([$ApprovalStatus]=='Approved','#107C10','#0078d7')))"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": ""
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": "sp-card-content sp-card-formatterRef"
+                },
+                "style": {
+                  "align-items": "center",
+                  "text-align": "center"
+                },
+                "children": [
+                  {
+                    "columnFormatterReference": "[$ApprovalStatus]"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "a",
+                "attributes": {
+                  "class": "ms-borderColor-neutralLight",
+                  "href": "[$FileRef]"
+                },
+                "style": {
+                  "float": "left"
+                },
+                "children": [
+                  {
+                    "elmType": "div",
+                    "attributes": {
+                      "class": "ms-bgColor-themeLighterAlt ms-bgColor-themePrimary--hover ms-fontColor-white--hover"
+                    },
+                    "style": {
+                      "display": "flex",
+                      "flex-wrap": "wrap",
+                      "flex-direction": "column",
+                      "align-items": "center",
+                      "padding": "1px",
+                      "margin-left": "20px",
+                      "box-shadow": "='2px 2px 4px ' + if([$ApprovalStatus]=='Rejected','#A4262C',if([$ApprovalStatus]=='Pending','#D83B01',if([$ApprovalStatus]=='Approved','#107C10','#0078d7')))"
+                    },
+                    "children": [
+                      {
+                        "elmType": "img",
+                        "attributes": {
+                          "src": "=@currentWeb + '/_layouts/15/getpreview.ashx?path='+[$FileRef]"
+                        },
+                        "style": {
+                          "width": "120px",
+                          "height": "auto"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "txtContent": "[$FileName]",
+                            "style": {
+                              "margin-bottom": "1px",
+                              "text-align": "center"
+                            },
+                            "attributes": {
+                              "class": "ms-fontSize-m ms-fontWeight-regular ms-fontColor-neutralSecondary"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "style": {
+              "text-align": "center"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "[$Title]",
+                  "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent"
+                },
+                "txtContent": "=''+[$LinkFilename]"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "position": "relative",
+              "width": "100%",
+              "height": "10px"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "display": "flex",
+                  "align-items": "center",
+                  "justify-content": "center",
+                  "width": "100%",
+                  "height": "100%"
+                },
+                "children": [
+                  {
+                    "elmType": "div",
+                    "style": {
+                      "width": "100%",
+                      "height": "3px"
+                    },
+                    "attributes": {
+                      "class": "ms-bgColor-neutralSecondaryAlt"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "color": "#fffff",
+              "display": "table",
+              "width": "100%",
+              "padding-left": "5px"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "txtContent": "❔",
+                "style": {
+                  "display": "=if([$ApproversResponsePending]!='','table-cell','none')",
+                  "text-align": "left",
+                  "vertical-align": "middle",
+                  "width": "20px"
+                }
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "display": "=if([$ApproversResponsePending]!='','flex','none')"
+                },
+                "children": [
+                  {
+                    "forEach": "personIterator in [$ApproversResponsePending]",
+                    "elmType": "div",
+                    "style": {
+                      "width": "32px",
+                      "height": "32px",
+                      "overflow": "hidden",
+                      "border-radius": "50%",
+                      "margin": "2px"
+                    },
+                    "children": [
+                      {
+                        "elmType": "img",
+                        "attributes": {
+                          "src": "=@currentWeb + '/_layouts/15/userphoto.aspx?size=S&accountname=' + [$personIterator.email]",
+                          "title": "[$personIterator.title]"
+                        },
+                        "style": {
+                          "position": "relative",
+                          "top": "50%",
+                          "left": "50%",
+                          "width": "100%",
+                          "height": "auto",
+                          "margin-left": "-50%",
+                          "margin-top": "-50%",
+                          "vertical-align": "baseline"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "color": "#fffff",
+              "display": "table",
+              "width": "100%",
+              "padding-left": "5px"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "txtContent": "✔️",
+                "style": {
+                  "display": "=if([$ApproversResponseYes]!='','table-cell','none')",
+                  "text-align": "left",
+                  "vertical-align": "middle",
+                  "width": "20px"
+                }
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "display": "=if([$ApproversResponseYes]!='','flex','none')"
+                },
+                "children": [
+                  {
+                    "forEach": "personIterator in [$ApproversResponseYes]",
+                    "elmType": "div",
+                    "style": {
+                      "width": "32px",
+                      "height": "32px",
+                      "overflow": "hidden",
+                      "border-radius": "50%",
+                      "margin": "2px"
+                    },
+                    "children": [
+                      {
+                        "elmType": "img",
+                        "attributes": {
+                          "src": "=@currentWeb + '/_layouts/15/userphoto.aspx?size=S&accountname=' + [$personIterator.email]",
+                          "title": "[$personIterator.title]"
+                        },
+                        "style": {
+                          "position": "relative",
+                          "top": "50%",
+                          "left": "50%",
+                          "width": "100%",
+                          "height": "auto",
+                          "margin-left": "-50%",
+                          "margin-top": "-50%",
+                          "vertical-align": "baseline"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "color": "#fffff",
+              "display": "table",
+              "width": "100%",
+              "padding-left": "5px"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "txtContent": "❌",
+                "style": {
+                  "display": "=if([$ApproversResponseNo]!='','table-cell','none')",
+                  "text-align": "left",
+                  "vertical-align": "middle",
+                  "width": "20px"
+                }
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "display": "=if([$ApproversResponseNo]!='','flex','none')"
+                },
+                "children": [
+                  {
+                    "forEach": "personIterator in [$ApproversResponseNo]",
+                    "elmType": "div",
+                    "style": {
+                      "width": "32px",
+                      "height": "32px",
+                      "overflow": "hidden",
+                      "border-radius": "50%",
+                      "margin": "2px"
+                    },
+                    "children": [
+                      {
+                        "elmType": "img",
+                        "attributes": {
+                          "src": "=@currentWeb + '/_layouts/15/userphoto.aspx?size=S&accountname=' + [$personIterator.email]",
+                          "title": "[$personIterator.title]"
+                        },
+                        "style": {
+                          "position": "relative",
+                          "top": "50%",
+                          "left": "50%",
+                          "width": "100%",
+                          "height": "auto",
+                          "margin-left": "-50%",
+                          "margin-top": "-50%",
+                          "vertical-align": "baseline"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
