@@ -5,6 +5,7 @@
 [🔗 Link to duplicate training Group form](https://forms.office.com/Pages/ShareFormPage.aspx?id=VmlEBz1JyEKtBek5y1IVP9rzU8kEae5Gs4vu1rIZ73lUQVRaUUE1R1dON1Q2S1ZXUFhKNVVSN0ZXOCQlQCN0PWcu&sharetoken=1wOZdoj43P6cqLm97B8y)
 
 Column Formatting JSON
+```
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "debugMode": true,
@@ -28,3 +29,4 @@ Column Formatting JSON
     }
   ]
 }
+```
