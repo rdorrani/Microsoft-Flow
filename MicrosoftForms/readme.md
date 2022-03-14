@@ -1,8 +1,8 @@
-[Watch the Step-by-step Tutorial on Save Microsoft Forms Responses & Attachments to SharePoint & Email](https://youtu.be/0U5jax-zMIc "Save Microsoft Forms Responses & Attachments to SharePoint & Email")
+[📽️ Watch the Step-by-step Tutorial on Save Microsoft Forms Responses & Attachments to SharePoint & Email](https://youtu.be/0U5jax-zMIc "Save Microsoft Forms Responses & Attachments to SharePoint & Email")
 
-[Link to duplicate incident reporting form](https://forms.office.com/Pages/ShareFormPage.aspx?id=VmlEBz1JyEKtBek5y1IVP0ItwN2SxE1FlM53ige1uMZUMVFYOEpOR05RU05KM0NUMFhFWFZQMTdMMi4u&sharetoken=eNLSYjs7NvFuAqbxg2OA)
+[🔗 Link to duplicate incident reporting form](https://forms.office.com/Pages/ShareFormPage.aspx?id=VmlEBz1JyEKtBek5y1IVP0ItwN2SxE1FlM53ige1uMZUMVFYOEpOR05RU05KM0NUMFhFWFZQMTdMMi4u&sharetoken=eNLSYjs7NvFuAqbxg2OA)
 
-[Link to duplicate training Group form](https://forms.office.com/Pages/ShareFormPage.aspx?id=VmlEBz1JyEKtBek5y1IVP9rzU8kEae5Gs4vu1rIZ73lUQVRaUUE1R1dON1Q2S1ZXUFhKNVVSN0ZXOCQlQCN0PWcu&sharetoken=1wOZdoj43P6cqLm97B8y)
+[🔗 Link to duplicate training Group form](https://forms.office.com/Pages/ShareFormPage.aspx?id=VmlEBz1JyEKtBek5y1IVP9rzU8kEae5Gs4vu1rIZ73lUQVRaUUE1R1dON1Q2S1ZXUFhKNVVSN0ZXOCQlQCN0PWcu&sharetoken=1wOZdoj43P6cqLm97B8y)
 
 Column Formatting JSON
 {
