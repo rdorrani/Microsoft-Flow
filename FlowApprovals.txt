@@ -1,0 +1,9 @@
+Trigger conditions:
+@or(equals(triggerOutputs()?['body/Status/Value'],'New'),equals(triggerOutputs()?['body/Status/Value'],'Rejected'))
+@equals(triggerOutputs()?['body/Author/Email'],triggerOutputs()?['body/Editor/Email'])
+
+Date Difference:
+dateDifference(item()?['requestDate'],item()?['responseDate'])
+
+HTML Table Style for Approval History:
+replace(replace(replace(body('Create_HTML_table'),'<table>','<table border="1px solid #ddd" width="100%" '),'<td>','<td style="padding:10px">'),'<th>','<th style="padding:10px">')
